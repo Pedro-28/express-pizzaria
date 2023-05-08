@@ -51,16 +51,19 @@ function Header() {
     <AppBar position="static" sx={{ backgroundColor: "#0000005c" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Image
-            src={pizzariaLogo}
-            alt="Pizzaria logo"
-            style={{ width: "80px", height: "80px" }}
-          />
-
+          <Button
+            sx={{ width: "80px", height: "80px" }}
+            onClick={() => router.push("/pizzas")}
+          >
+            <Image
+              src={pizzariaLogo}
+              alt="Pizzaria logo"
+              style={{ width: "80px", height: "80px" }}
+            />
+          </Button>
           <Box sx={{ flexGrow: 1, display: "flex" }}>
             {pages.map(({ page, endPoint }) => (
               <Button
-                // box home e menu tela grande
                 key={page}
                 onClick={() => router.push(endPoint)}
                 sx={{ my: 2, color: "#FFCC33", display: "block" }}
@@ -118,9 +121,7 @@ function Header() {
                   key={option}
                   onClick={() => handleUserMenuClick(option, endPoint)}
                 >
-                  <Typography textAlign="center">
-                    {option}
-                  </Typography>
+                  <Typography textAlign="center">{option}</Typography>
                 </MenuItem>
               ))}
             </Menu>

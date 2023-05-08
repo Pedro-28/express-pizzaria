@@ -32,9 +32,9 @@ const StyledField = styled(TextField)(({ theme }) => ({
   },
 
   ".MuiOutlinedInput-root:not(.Mui-focused):hover .MuiOutlinedInput-notchedOutline":
-    {
-      borderColor: "white",
-    },
+  {
+    borderColor: "white",
+  },
 }));
 
 const StyledRadio = styled(Radio)(({ theme }) => ({
@@ -146,7 +146,6 @@ export default function PizzaUpdateModalForm({
             img,
           }}
           onSubmit={async ({ ingredient, ...fields }) => {
-            console.log(fields);
             await handlePizzaUpdate({ ...fields, price: +fields.price });
           }}
           validationSchema={validationPizza}
