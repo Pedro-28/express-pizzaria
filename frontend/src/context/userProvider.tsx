@@ -27,7 +27,7 @@ type UserProviderProps = {
 
 const adminMenu = [
   { option: "Meu perfil", endPoint: "/user/perfil" },
-  { option: "Meus pedidos", endPoint: "/user/meus_pedidos" },
+  { option: "Pedidos", endPoint: "/user/meus_pedidos" },
   { option: "Usuários", endPoint: "/admin/usuarios" },
   { option: "Pizzas", endPoint: "/admin/pizzas" },
   { option: "Sair", endPoint: "/pizzas" },
